@@ -1,11 +1,20 @@
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.dateTime;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.Timer;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -21,11 +30,24 @@ public class Journey_details extends javax.swing.JFrame {
      * Creates new form Journey_details
      */
     Connection conn;
+    
     PreparedStatement ps;
+    PreparedStatement p;
     public Journey_details() {
         initComponents();
+        
+       
     }
 
+        String username;
+        
+     public Journey_details(String user) {
+        initComponents();
+        this.username=user;
+        
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -191,20 +213,38 @@ public class Journey_details extends javax.swing.JFrame {
         String From=  from_dropdown.getSelectedItem().toString();
         String To= to_dropdown.getSelectedItem().toString();
         String Ticket_Type= ticket_type_Dropdown.getSelectedItem().toString();
-        
+        String User=username;
+        String ticket_no=null;
         if(!From.equalsIgnoreCase("Please Select")&& !To.equalsIgnoreCase("Please Select" )&& !Ticket_Type.equalsIgnoreCase("Please Select"))
         {  if(!From.equals(To))
            {
                try{
                conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/users?user=root&password=Chakra@321");
-               ps =conn.prepareStatement("insert into journey (from,to,ticket_type)values(?,?,?)  ");
-              
+               ps =conn.prepareStatement("insert into journey (source,destination,ticket_type,email_id)values(?,?,?,?)  ");
+             
                ps.setString(1,From);
                ps.setString(2,To);
                ps.setString(3, Ticket_Type);
+               ps.setString(4,User);
 
                ps.executeUpdate();
-               Ticket_Page gnrTicket = new Ticket_Page();
+                
+                p=conn.prepareStatement("select ticket_no from journey where email_id like ?");
+                p.setString(1,User);
+                ResultSet rs=p.executeQuery();
+                while(rs.next())
+                {
+                ticket_no=rs.getString("ticket_no");
+                }
+                
+                
+                
+               Ticket_Page gnrTicket = new Ticket_Page(User);
+               gnrTicket.source.setText(From);
+               gnrTicket.ticket_no.setText(ticket_no);
+               gnrTicket.destination.setText(To);
+               gnrTicket.ticket_type.setText(Ticket_Type);
+               gnrTicket.user_name.setText(User);
                gnrTicket.setVisible(true);
                gnrTicket.setLocationRelativeTo(null);
                this.dispose();

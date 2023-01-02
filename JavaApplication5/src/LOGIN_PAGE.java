@@ -171,7 +171,7 @@ public class LOGIN_PAGE extends javax.swing.JFrame {
            
             ResultSet rs=ps.executeQuery();
         
-            while(rs.next())
+            while(rs.next())  // for traversing in database
             {
                 passgot=rs.getString("password");
             }
@@ -183,7 +183,7 @@ public class LOGIN_PAGE extends javax.swing.JFrame {
         }
         if(password.equals(passgot))
         {
-        Journey_details log_button = new Journey_details();
+        Journey_details log_button = new Journey_details(user);
         log_button.setVisible(true);
         log_button.setLocationRelativeTo(null);
         //log_button.getCusername(user);
@@ -236,6 +236,7 @@ public class LOGIN_PAGE extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
                 new LOGIN_PAGE().setVisible(true);
             }
         });

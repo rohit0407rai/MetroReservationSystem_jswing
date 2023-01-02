@@ -15,6 +15,11 @@ public class Thank_you_logout extends javax.swing.JFrame {
     public Thank_you_logout() {
         initComponents();
     }
+    String User;
+     public Thank_you_logout(String user) {
+        initComponents();
+        this.User=user;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -90,10 +95,11 @@ public class Thank_you_logout extends javax.swing.JFrame {
 
     private void button_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_logoutActionPerformed
         // TODO add your handling code here:
-        LOGIN_REGISTER loginPage_button = new LOGIN_REGISTER();
-        loginPage_button.setVisible(true);
-        loginPage_button.setLocationRelativeTo(null);
-        this.dispose();
+       Final_Bye fb=new Final_Bye();
+       fb.jTextField1.setText("You have been succesfully logge out "+User);
+       fb.setVisible(true);
+       fb.setLocationRelativeTo(null);
+       this.dispose();
     }//GEN-LAST:event_button_logoutActionPerformed
 
     /**
