@@ -1,20 +1,9 @@
-import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.dateTime;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import javax.swing.Timer;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -236,6 +225,7 @@ public class Journey_details extends javax.swing.JFrame {
                 {
                 ticket_no=rs.getString("ticket_no");
                 }
+                String price;
                 
                 
                 
@@ -245,6 +235,1965 @@ public class Journey_details extends javax.swing.JFrame {
                gnrTicket.destination.setText(To);
                gnrTicket.ticket_type.setText(Ticket_Type);
                gnrTicket.user_name.setText(User);
+               if(From.equals("Versova")&&To.equals("DN Nagar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+               else  if(From.equals("Versova")&&To.equals("Azad Nagar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                 else  if(From.equals("Versova")&&To.equals("Andheri"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+
+                }
+               else  if(From.equals("Versova")&&To.equals("Western Express Highway"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Versova")&&To.equals("Chakala"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                    
+                }
+               
+               else  if(From.equals("Versova")&&To.equals("Airport Road"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Versova")&&To.equals("Marol Naka"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Versova")&&To.equals("Saki Naka"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Versova")&&To.equals("Asalpha"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Versova")&&To.equals("Jagruti Nagar"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               
+               
+                 else  if(From.equals("Versova")&&To.equals("Ghatkopar"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("DN Nagar")&&To.equals("Versova"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("DN Nagar")&&To.equals("Azad Nagar"))
+                { if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("DN Nagar")&&To.equals("Andheri"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("DN Nagar")&&To.equals("Western Express Highway"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("DN Nagar")&&To.equals("Chakala"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("DN Nagar")&&To.equals("Airport Road"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("DN Nagar")&&To.equals("Marol Naka"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("DN Nagar")&&To.equals("Saki Naka"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("DN Nagar")&&To.equals("Jagruti Nagar"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("DN Nagar")&&To.equals("Ghatkopar"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                 else  if(From.equals("DN Nagar")&&To.equals("Asalpha"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Azad Nagar")&&To.equals("Versova"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Azad Nagar")&&To.equals("DN Nagar"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Azad Nagar")&&To.equals("Andheri"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Azad Nagar")&&To.equals("Western Express Highway"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Azad Nagar")&&To.equals("Chakala"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Azad Nagar")&&To.equals("Airport Road"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                   
+                }
+               else  if(From.equals("Azad Nagar")&&To.equals("Marol Naka"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                   
+                    
+                }
+               else  if(From.equals("Azad Nagar")&&To.equals("Saki Naka"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Azad Nagar")&&To.equals("Jagruti Nagar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Azad Nagar")&&To.equals("Ghatkopar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                 else  if(From.equals("Azad Nagar")&&To.equals("Asalpha"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Andheri")&&To.equals("Versova"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Andheri")&&To.equals("DN Nagar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Andheri")&&To.equals("Azad Nagar"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("Andheri")&&To.equals("Western Express Highway"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Andheri")&&To.equals("Chakala"))
+                {
+                  if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Andheri")&&To.equals("Airport Road"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Andheri")&&To.equals("Marol Naka"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Andheri")&&To.equals("Saki Naka"))
+                { if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("Andheri")&&To.equals("Jagruti Nagar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Andheri")&&To.equals("Ghatkopar"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                
+                else  if(From.equals("Andheri")&&To.equals("Asalpha"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Western Express Highway")&&To.equals("Versova"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Western Express Highway")&&To.equals("DN Nagar"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Western Express Highway")&&To.equals("Azad Nagar"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Western Express Highway")&&To.equals("Andheri"))
+                {
+                  if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Western Express Highway")&&To.equals("Chakala"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Western Express Highway")&&To.equals("Airport Road"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+               else  if(From.equals("Western Express Highway")&&To.equals("Marol Naka"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Western Express Highway")&&To.equals("Saki Naka"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Western Express Highway")&&To.equals("Jagruti Nagar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Western Express Highway")&&To.equals("Ghatkopar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Western Express Highway")&&To.equals("Asalpha"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                   else  if(From.equals("Chakala")&&To.equals("Versova"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("Chakala")&&To.equals("DN Nagar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Chakala")&&To.equals("Azad Nagar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Chakala")&&To.equals("Andheri"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Chakala")&&To.equals("Western Express Highway"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Chakala")&&To.equals("Airport Road"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Chakala")&&To.equals("Marol Naka"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+               else  if(From.equals("Chakala")&&To.equals("Saki Naka"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Chakala")&&To.equals("Jagruti Nagar"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Chakala")&&To.equals("Ghatkopar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Chakala")&&To.equals("Asalpha"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Airport Road")&&To.equals("Versova"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Airport Road")&&To.equals("DN Nagar"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Airport Road")&&To.equals("Azad Nagar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Airport Road")&&To.equals("Andheri"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("Airport Road")&&To.equals("Western Express Highway"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Airport Road")&&To.equals("Chakala"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+               else  if(From.equals("Airport Road")&&To.equals("Marol Naka"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Airport Road")&&To.equals("Saki Naka"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Airport Road")&&To.equals("Jagruti Nagar"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Airport Road")&&To.equals("Ghatkopar"))
+                {
+                  if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Airport Road")&&To.equals("Asalpha"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Marol Naka")&&To.equals("Versova"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Marol Naka")&&To.equals("DN Nagar"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("Marol Naka")&&To.equals("Azad Nagar"))
+                {
+                  if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Marol Naka")&&To.equals("Andheri"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("Marol Naka")&&To.equals("Western Express Highway"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Marol Naka")&&To.equals("Chakala"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+               else  if(From.equals("Marol Naka")&&To.equals("Airport Road"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+               else  if(From.equals("Marol Naka")&&To.equals("Saki Naka"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Marol Naka")&&To.equals("Jagruti Nagar"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("Marol Naka")&&To.equals("Ghatkopar"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Marol Naka")&&To.equals("Asalpha"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+               else  if(From.equals("Saki Naka")&&To.equals("Versova"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Saki Naka")&&To.equals("DN Nagar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("Saki Naka")&&To.equals("Azad Nagar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Saki Naka")&&To.equals("Andheri"))
+                {
+                    
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Saki Naka")&&To.equals("Western Express Highway"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+               else  if(From.equals("Saki Naka")&&To.equals("Chakala"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Saki Naka")&&To.equals("Airport Road"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Saki Naka")&&To.equals("Marol Naka"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("Saki Naka")&&To.equals("Jagruti Nagar"))
+                { if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("Saki Naka")&&To.equals("Ghatkopar"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+               else  if(From.equals("Saki Naka")&&To.equals("Asalpha"))
+                { if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+               else  if(From.equals("Asalpha")&&To.equals("Versova"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Asalpha")&&To.equals("DN Nagar"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("Asalpha")&&To.equals("Azad Nagar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Asalpha")&&To.equals("Andheri"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("Asalpha")&&To.equals("Western Express Highway"))
+                { if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+               else  if(From.equals("Asalpha")&&To.equals("Chakala"))
+                {  if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Asalpha")&&To.equals("Airport Road"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+
+                    
+                }
+               else  if(From.equals("Asalpha")&&To.equals("Marol Naka"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+
+                    
+                }
+                else  if(From.equals("Asalpha")&&To.equals("Jagruti Nagar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+
+                    
+                }
+                else  if(From.equals("Asalpha")&&To.equals("Ghatkopar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+
+                    
+                }
+               else  if(From.equals("Asalpha")&&To.equals("Saki Naka"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Jagruti Nagar")&&To.equals("Versova"))
+                {if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("Jagruti Nagar")&&To.equals("DN Nagar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                   
+                }
+                else  if(From.equals("Jagruti Nagar")&&To.equals("Azad Nagar"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Jagruti Nagar")&&To.equals("Andheri"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("Jagruti Nagar")&&To.equals("Western Express Highway"))
+                { if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Jagruti Nagar")&&To.equals("Chakala"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Jagruti Nagar")&&To.equals("Airport Road"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Jagruti Nagar")&&To.equals("Marol Naka"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("Jagruti Nagar")&&To.equals("Asalpha"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Jagruti Nagar")&&To.equals("Ghatkopar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Jagruti Nagar")&&To.equals("Saki Naka"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+               else  if(From.equals("Ghatkopar")&&To.equals("Versova"))
+                {
+                  if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Ghatkopar")&&To.equals("DN Nagar"))
+                { if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+                else  if(From.equals("Ghatkopar")&&To.equals("Azad Nagar"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Ghatkopar")&&To.equals("Andheri"))
+                {
+                   
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="30Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="60Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Ghatkopar")&&To.equals("Western Express Highway"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Ghatkopar")&&To.equals("Chakala"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Ghatkopar")&&To.equals("Airport Road"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+               else  if(From.equals("Ghatkopar")&&To.equals("Marol Naka"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="20Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="40Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                    
+                }
+                else  if(From.equals("Ghatkopar")&&To.equals("Asalpha"))
+                {
+                   if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+                else  if(From.equals("Ghatkopar")&&To.equals("Jagruti Nagar"))
+                {
+                     if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                }
+               else  if(From.equals("Ghatkopar")&&To.equals("Saki Naka"))
+                {
+                    if(Ticket_Type.equals("Single Journey"))
+                    {
+                    price="10Rs";
+                    gnrTicket.price.setText(price);
+                    }
+                    else if(Ticket_Type.equals("Return Journey"))
+                    {
+                        price="20Rs";
+                        gnrTicket.price.setText(price);
+                                
+                    }
+                    
+                }
+
+                              
+
+               gnrTicket.text.setText("First click here and then proceed");
+                
                gnrTicket.setVisible(true);
                gnrTicket.setLocationRelativeTo(null);
                this.dispose();

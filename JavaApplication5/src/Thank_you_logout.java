@@ -96,7 +96,7 @@ public class Thank_you_logout extends javax.swing.JFrame {
     private void button_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_logoutActionPerformed
         // TODO add your handling code here:
        Final_Bye fb=new Final_Bye();
-       fb.jTextField1.setText("You have been succesfully logge out "+User);
+       fb.jTextField1.setText("Succesfully logged out from "+User);
        fb.setVisible(true);
        fb.setLocationRelativeTo(null);
        this.dispose();
